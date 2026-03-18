@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style rel="stylesheet" href="styles.css"></style>
+</head>
+<body>
+    <div class="box">
+        <h1>Conversor de Temperatura</h1>
+        <label for="numb_txt">Entre com a temperatura:</label>
+        <input type="text" placeholder="Digite um número qualquer: " id="numb_txt"> <br>
+        <input type="radio" name="conversor" id="fahrenheit_conversor">Celsius -> Fahrenheit
+        <input type="radio" name="conversor" id="celsius_conversor">Fahrenheit -> Celsius
+        <button id="btn_conversor" onclick="submitBtn()">Enviar</button>
+        <p id="conversor_p"></p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

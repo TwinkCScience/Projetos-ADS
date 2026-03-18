@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fundo da página */
+body {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container principal */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input */
+#txt {
+    width: 70%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+#txt:focus {
+    border-color: #4facfe;
+}
+
+/* Botão */
+#btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #4facfe;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btn:hover {
+    background: #007bff;
+}
+
+/* Caixa da lista */
+#box {
+    position: fixed;        /* Fixa na tela */
+    bottom: 20px;           /* Distância do rodapé */
+    left: 50%;              /* Centraliza horizontalmente */
+    transform: translateX(-50%);
+    width: 90%;             /* Ocupa quase toda a largura */
+    max-width: 400px;       /* Limite de largura */
+    padding: 15px;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border: 1px solid #ddd;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;          /* Fica sobre outros elementos */
+}
+
+
+
+/* Itens da lista */
+.item {
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Botão de remover */
+.remove {
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.remove:hover {
+    background: darkred;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To do list</h1>
+        <input type="text" placeholder="Entre com um item:" id="txt">
+        <button id="btn">Criar</button>
+        <div id="box" hidden></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
