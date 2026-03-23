@@ -1,0 +1,13 @@
+{
+    "name": "Video Player",
+    "display": "standalone",
+    "start_url": "video_player.html",
+    "description": "A little video player like Youtube",
+    "icons": [
+        {
+            "src": "Youtube_logo.png",
+            "tupe": "image/png",
+            "sizes": "144x144"
+        }
+    ]
+}

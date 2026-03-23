@@ -1,0 +1,104 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo moderno */
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Botão moderno */
+.auto_btn {
+  margin-bottom: 30px;
+  padding: 14px 28px;
+  font-size: 15px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.auto_btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.auto_btn:active {
+  transform: scale(0.96);
+}
+
+/* Container do piano */
+.piano {
+  position: relative;
+  display: flex;
+  width: 90%;
+  max-width: 900px;
+  height: 260px;
+  padding: 10px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* Estilo geral das teclas */
+.key {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 11px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Teclas brancas */
+.white {
+  flex: 1;
+  height: 100%;
+  margin: 0 2px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #fff, #e6e6e6);
+}
+
+.black {
+  position: absolute;
+  width: 5%;
+  height: 60%;
+  top: 0;
+  background: black;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Posicionamento proporcional */
+.c-sharp { left: 9%; }
+.d-sharp { left: 19%; }
+.f-sharp { left: 39%; }
+.g-sharp { left: 49%; }
+.a-sharp { left: 59%; }
+
+/* Efeito ao clicar */
+.white:active {
+  background: linear-gradient(to bottom, #ddd, #bbb);
+  transform: translateY(3px);
+}
+
+.black:active {
+  background: #222;
+  transform: translateY(2px);
+}
